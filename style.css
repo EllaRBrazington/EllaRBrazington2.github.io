@@ -1506,3 +1506,78 @@ section {
 
     letter-spacing: 1px;
 }
+
+/* =========================================
+   DESKTOP HERO UPGRADE
+========================================= */
+
+@media (min-width: 901px) {
+
+    .hero {
+        min-height: calc(100vh - 75px);
+        padding: 80px 8%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hero::after {
+        content: "EB.";
+        position: absolute;
+        right: 7%;
+        top: 50%;
+        transform: translateY(-50%);
+        
+        font-family: 'Playfair Display', serif;
+        font-size: 280px;
+        line-height: 1;
+        font-weight: 500;
+        
+        color: rgba(91, 130, 169, 0.08);
+        pointer-events: none;
+    }
+
+    .hero-text {
+        max-width: 850px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .intro {
+        margin-bottom: 25px;
+    }
+
+    .hero h1 {
+        font-size: clamp(85px, 9vw, 135px);
+        max-width: 850px;
+        margin-bottom: 30px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+        margin-bottom: 24px;
+    }
+
+    .hero-description {
+        max-width: 560px;
+        font-size: 17px;
+        line-height: 1.8;
+        margin-bottom: 38px;
+    }
+
+    .hero-buttons {
+        gap: 16px;
+    }
+
+    .hero::before {
+        content: "";
+        position: absolute;
+        width: 420px;
+        height: 420px;
+        right: 8%;
+        top: 50%;
+        transform: translateY(-50%);
+        
+        border: 1px solid rgba(91, 130, 169, 0.18);
+        border-radius: 50%;
+    }
+}
