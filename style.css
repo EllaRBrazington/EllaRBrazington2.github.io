@@ -1508,76 +1508,100 @@ section {
 }
 
 /* =========================================
-   DESKTOP HERO UPGRADE
+   NEW DESKTOP HERO
 ========================================= */
 
 @media (min-width: 901px) {
 
     .hero {
         min-height: calc(100vh - 75px);
-        padding: 80px 8%;
+        padding: 70px 8%;
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        align-items: center;
+        gap: 70px;
         position: relative;
         overflow: hidden;
     }
 
-    .hero::after {
-        content: "EB.";
-        position: absolute;
-        right: 7%;
-        top: 50%;
-        transform: translateY(-50%);
-        
-        font-family: 'Playfair Display', serif;
-        font-size: 280px;
-        line-height: 1;
-        font-weight: 500;
-        
-        color: rgba(91, 130, 169, 0.08);
-        pointer-events: none;
-    }
-
     .hero-text {
-        max-width: 850px;
+        max-width: 700px;
         position: relative;
         z-index: 2;
     }
 
     .intro {
-        margin-bottom: 25px;
+        font-size: 12px;
+        letter-spacing: 4px;
+        margin-bottom: 22px;
     }
 
     .hero h1 {
-        font-size: clamp(85px, 9vw, 135px);
-        max-width: 850px;
-        margin-bottom: 30px;
+        font-size: clamp(75px, 7.5vw, 115px);
+        line-height: 0.88;
+        letter-spacing: -5px;
+        margin-bottom: 28px;
     }
 
     .hero h2 {
-        font-size: 28px;
-        margin-bottom: 24px;
+        font-size: 27px;
+        margin-bottom: 20px;
     }
 
     .hero-description {
-        max-width: 560px;
-        font-size: 17px;
+        max-width: 530px;
+        font-size: 16px;
         line-height: 1.8;
-        margin-bottom: 38px;
+        margin-bottom: 32px;
     }
 
-    .hero-buttons {
-        gap: 16px;
-    }
+
+    /* RIGHT-HAND DESIGN ELEMENT */
 
     .hero::before {
         content: "";
         position: absolute;
-        width: 420px;
-        height: 420px;
-        right: 8%;
+        right: -100px;
         top: 50%;
         transform: translateY(-50%);
-        
-        border: 1px solid rgba(91, 130, 169, 0.18);
+
+        width: 600px;
+        height: 600px;
+
         border-radius: 50%;
+
+        background: #eef3f8;
+        border: 1px solid #dce5ed;
     }
+
+    .hero::after {
+        content: "EB.";
+
+        position: absolute;
+        right: 9%;
+        top: 50%;
+        transform: translateY(-50%);
+
+        width: 430px;
+        height: 500px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 28px;
+
+        background: white;
+        border: 1px solid #e1e7ec;
+
+        box-shadow:
+            0 30px 80px rgba(23, 32, 51, 0.10);
+
+        font-family: 'Playfair Display', serif;
+        font-size: 130px;
+        color: #315a8a;
+
+        z-index: 1;
+    }
+
 }
